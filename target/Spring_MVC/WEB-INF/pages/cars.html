@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Person List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Cars table</h1>
+<br/><br/>
+<div>
+    <table th:border="1">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Number</th>
+        </tr>
+        <tr th:each ="car : ${cars}">
+            <td th:utext="${car.getBrand()}">...</td>
+            <td th:utext="${car.getModel()}">...</td>
+            <td th:utext="${car.getNumber()}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
